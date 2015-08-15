@@ -1,0 +1,15 @@
+<ion-view view-title="Drug Details - {{code.Drug}}">
+    <ion-content class="padding">
+        <div class="item-inset item-divider item-stable" align="center">
+            Select drug strength or pack size
+        </div>
+        <br>
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right item-text-wrap" type="item-text-wrap">
+                <h2>{{ code.Drug }} {{ code.Streamline }}</h2> <span class="item-note">Pack size: {{ code.ScriptType }}</span>
+                <p>({{ code.Cancer}})</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

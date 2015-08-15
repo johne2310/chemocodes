@@ -1,0 +1,627 @@
+[
+    {
+        "id": "001",
+        "Drug": "Arsenic",
+        "Details": [
+            {
+                "detailID": "001a",
+                "PBS_code": "7241D",
+                "Drug": "ARSENIC",
+                "Max_amount": "18 mg",
+                "Repeats": 89,
+                "Code": 4793,
+                "Category": "Streamlined",
+                "Diagnosis": "",
+                "Cancer": ""
+            }
+                   ]
+    },
+    {
+        "id": "002",
+        "Drug": "Bevacizumab",
+        "Details": [
+            {
+                "detailID": "002a",
+                "PBS_code": "10114H",
+                "Drug": "BEVACIZUMAB",
+                "Max_amount": "900 mg",
+                "Repeats": 11,
+                "Code": 4584,
+                "Category": "Streamlined",
+                "Diagnosis": "",
+                "Cancer": ""
+  },
+            {
+                "detailID": "002a",
+                "PBS_code": "10120P",
+                "Drug": "BEVACIZUMAB",
+                "Max_amount": "900 mg",
+                "Repeats": 5,
+                "Code": 4814,
+                "Category": "Streamlined",
+                "Diagnosis": "",
+                "Cancer": ""
+  },
+            {
+                "detailID": "002a",
+                "PBS_code": "7243F",
+                "Drug": "BEVACIZUMAB",
+                "Max_amount": "900 mg",
+                "Repeats": 11,
+                "Code": 4594,
+                "Category": "Streamlined",
+                "Diagnosis": "",
+                "Cancer": ""
+  }
+                   ]
+    },
+
+
+
+
+
+
+
+
+
+    {
+        "PBS_code": "7244G",
+        "Drug": "BLEOMYCIN SULFATE",
+        "Max_amount": "30000 iu",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7238Y",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 31,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7274W",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 19,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7275X",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 15,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7268M",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 15,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7269N",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7271Q",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 15,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7272R",
+        "Drug": "BORTEZOMIB",
+        "Max_amount": "3000 mcg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10172J",
+        "Drug": "BRENTUXIMAB VEDOTIN",
+        "Max_amount": "200 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10180T",
+        "Drug": "BRENTUXIMAB VEDOTIN",
+        "Max_amount": "200 mg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7236W",
+        "Drug": "CABAZITAXEL",
+        "Max_amount": "55 mg",
+        "Repeats": 5,
+        "Code": 4662,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7222D",
+        "Drug": "CARBOPLATIN",
+        "Max_amount": "900 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "10265G",
+        "Drug": "CETUXIMAB",
+        "Max_amount": "550 mg",
+        "Repeats": 18,
+        "Code": 4912,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7223E",
+        "Drug": "CETUXIMAB",
+        "Max_amount": "880 mg",
+        "Repeats": 0,
+        "Code": 4794,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7240C",
+        "Drug": "CETUXIMAB",
+        "Max_amount": "550 mg",
+        "Repeats": 5,
+        "Code": 4788,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7242E",
+        "Drug": "CETUXIMAB",
+        "Max_amount": "880 mg",
+        "Repeats": 0,
+        "Code": 4965,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7273T",
+        "Drug": "CETUXIMAB",
+        "Max_amount": "550 mg",
+        "Repeats": 11,
+        "Code": 4945,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7224F",
+        "Drug": "CISPLATIN",
+        "Max_amount": "220 mg",
+        "Repeats": 14,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7225G",
+        "Drug": "CLADRIBINE",
+        "Max_amount": "17 mg",
+        "Repeats": 6,
+        "Code": 3180,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7226H",
+        "Drug": "CYCLOPHOSPHAMIDE",
+        "Max_amount": "2800 mg",
+        "Repeats": 17,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7227J",
+        "Drug": "CYTARABINE",
+        "Max_amount": "7000 mg",
+        "Repeats": 15,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "10158P",
+        "Drug": "DOCETAXEL",
+        "Max_amount": "250 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7229L",
+        "Drug": "DOXORUBICIN",
+        "Max_amount": "135 mg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7230M",
+        "Drug": "DOXORUBICIN HYDROCHLORIDE-PEGYLATED LIPOSOMAL",
+        "Max_amount": "100 mg",
+        "Repeats": 5,
+        "Code": 4786,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7231N",
+        "Drug": "EPIRUBICIN",
+        "Max_amount": "220 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "10140Q",
+        "Drug": "ERIBULIN",
+        "Max_amount": "3 mg",
+        "Repeats": 13,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7237X",
+        "Drug": "ETOPOSIDE",
+        "Max_amount": "440 mg",
+        "Repeats": 14,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7233Q",
+        "Drug": "FLUDARABINE",
+        "Max_amount": "55 mg",
+        "Repeats": 29,
+        "Code": 3887,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7234R",
+        "Drug": "FLUOROURACIL",
+        "Max_amount": "5500 mg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7239B",
+        "Drug": "FLUOROURACIL",
+        "Max_amount": "1000 mg",
+        "Repeats": 23,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7245H",
+        "Drug": "FOTEMUSTINE",
+        "Max_amount": "220 mg",
+        "Repeats": 8,
+        "Code": 3181,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7246J",
+        "Drug": "GEMCITABINE",
+        "Max_amount": "3000 mg",
+        "Repeats": 17,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7247K",
+        "Drug": "IDARUBICIN",
+        "Max_amount": "30 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7248L",
+        "Drug": "IFOSFAMIDE",
+        "Max_amount": "4000 mg",
+        "Repeats": 19,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "2638W",
+        "Drug": "IPILIMUMAB",
+        "Max_amount": "360 mg",
+        "Repeats": 3,
+        "Code": 4254,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "2643D",
+        "Drug": "IPILIMUMAB",
+        "Max_amount": "360 mg",
+        "Repeats": 2,
+        "Code": 4251,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7249M",
+        "Drug": "IRINOTECAN",
+        "Max_amount": "800 mg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7250N",
+        "Drug": "METHOTREXATE",
+        "Max_amount": "250 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7251P",
+        "Drug": "METHOTREXATE",
+        "Max_amount": "20000 mg",
+        "Repeats": 0,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7252Q",
+        "Drug": "MITOZANTRONE",
+        "Max_amount": "30 mg",
+        "Repeats": 5,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "10418H",
+        "Drug": "OBINUTUZUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 7,
+        "Code": 0,
+        "Category": "Phone Authority"
+  },
+    {
+        "PBS_code": "10237T",
+        "Drug": "OFATUMUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 5,
+        "Code": 4858,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10239X",
+        "Drug": "OFATUMUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 5,
+        "Code": 4828,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10240Y",
+        "Drug": "OFATUMUMAB",
+        "Max_amount": "300 mg",
+        "Repeats": 0,
+        "Code": 4828,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7253R",
+        "Drug": "OXALIPLATIN",
+        "Max_amount": "300 mg",
+        "Repeats": 11,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7254T",
+        "Drug": "PACLITAXEL",
+        "Max_amount": "450 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "10150F",
+        "Drug": "PACLITAXEL NANOPARTICLE ALBUMIN BOUND",
+        "Max_amount": "275 mg",
+        "Repeats": 11,
+        "Code": 4657,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7270P",
+        "Drug": "PACLITAXEL NANOPARTICLE ALBUMIN BOUND",
+        "Max_amount": "580 mg",
+        "Repeats": 5,
+        "Code": 3955,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10069Y",
+        "Drug": "PANITUMUMAB",
+        "Max_amount": "720 mg",
+        "Repeats": 5,
+        "Code": 4784,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7255W",
+        "Drug": "PEMETREXED",
+        "Max_amount": "1100 mg",
+        "Repeats": 5,
+        "Code": 4792,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10268K",
+        "Drug": "PERTUZUMAB",
+        "Max_amount": "840 mg",
+        "Repeats": 1,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10308M",
+        "Drug": "PERTUZUMAB",
+        "Max_amount": "420 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10334X",
+        "Drug": "PERTUZUMAB",
+        "Max_amount": "840 mg",
+        "Repeats": 0,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7256X",
+        "Drug": "RALTITREXED",
+        "Max_amount": "7 mg",
+        "Repeats": 8,
+        "Code": 3185,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10193L",
+        "Drug": "RITUXIMAB",
+        "Max_amount": "800 mg",
+        "Repeats": 11,
+        "Code": 4674,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7257Y",
+        "Drug": "RITUXIMAB",
+        "Max_amount": "800 mg",
+        "Repeats": 3,
+        "Code": 4677,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7258B",
+        "Drug": "RITUXIMAB",
+        "Max_amount": "800 mg",
+        "Repeats": 7,
+        "Code": 4701,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7259C",
+        "Drug": "RITUXIMAB",
+        "Max_amount": "1100 mg",
+        "Repeats": 5,
+        "Code": 4706,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "7260D",
+        "Drug": "TOPOTECAN",
+        "Max_amount": "3500 mcg",
+        "Repeats": 17,
+        "Code": 3186,
+        "Category": "Streamlined"
+  },
+    {
+        "PBS_code": "10381J",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10383L",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "750 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10402L",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 0,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7264H",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "500 mg",
+        "Repeats": 0,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7265J",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "250 mg",
+        "Repeats": 9,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7266K",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "1000 mg",
+        "Repeats": 0,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7267L",
+        "Drug": "TRASTUZUMAB",
+        "Max_amount": "750 mg",
+        "Repeats": 3,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "10281D",
+        "Drug": "TRASTUZUMAB EMTANSINE",
+        "Max_amount": "450 mg",
+        "Repeats": 8,
+        "Code": 0,
+        "Category": "Non-Streamlined Authority"
+  },
+    {
+        "PBS_code": "7261E",
+        "Drug": "VINBLASTINE",
+        "Max_amount": "20 mg",
+        "Repeats": 17,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7262F",
+        "Drug": "VINCRISTINE",
+        "Max_amount": "2 mg",
+        "Repeats": 7,
+        "Code": 0,
+        "Category": "Non-authority"
+  },
+    {
+        "PBS_code": "7263G",
+        "Drug": "VINORELBINE",
+        "Max_amount": "70 mg",
+        "Repeats": 7,
+        "Code": 0,
+        "Category": "Non-authority"
+  }
+]
