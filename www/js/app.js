@@ -1,6 +1,6 @@
-var chemoCodes = angular.module('chemoCodes', ['ionic', 'chemoCodes.controllers', 'chemoCodes.services', 'chemoCodes.directives']);
+var chemoCodes = angular.module('chemoCodes', ['ionic', 'list.controller', 'detail.controller', 'chemoCodes.services', 'home.controller', 'about.controller', 'chemoCodes.directives']);
 
-chemoCodes.run(function ($ionicPlatform) {
+chemoCodes.run(function ($ionicPlatform, CodeStore) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -11,8 +11,10 @@ chemoCodes.run(function ($ionicPlatform) {
             // org.apache.cordova.statusbar required
             StatusBar.styleLightContent();
         }
+        CodeStore.initDB(); //initialise database
     });
 });
+
 
 chemoCodes.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -22,7 +24,7 @@ chemoCodes.config(function ($stateProvider, $urlRouterProvider) {
         .state('tab', {
         url: "/tab",
         abstract: true,
-        templateUrl: "templates/tabs.html"
+        templateUrl: "views/tabs/tabs.html"
     })
 
     // Each tab has its own nav history stack:
@@ -31,48 +33,41 @@ chemoCodes.config(function ($stateProvider, $urlRouterProvider) {
         url: '/home',
         views: {
             'tab-home': {
-                templateUrl: 'templates/tab-home.html',
+                templateUrl: 'views/home/home.html',
                 controller: 'HomeCtrl'
             }
         }
     })
 
     .state('tab.list', {
-            url: '/list',
-            views: {
-                'tab-list': {
-                    templateUrl: 'templates/tab-list.html',
-                    controller: 'listCtrl'
-                }
+        url: '/list',
+        views: {
+            'tab-list': {
+                templateUrl: 'views/list/list.html',
+                controller: 'listCtrl'
             }
-        })
-//        .state('tab.drug', {
-             //            url: '/list/:codeId',
-             //            views: {
-             //                'tab-list': {
-             //                    templateUrl: 'templates/tab-drug.html',
-             //                    controller: 'detailCtrl'
-             //                }
-             //            }
-             //        })
-        .state('tab.detail', {
-            url: '/list/:codeId',
-            views: {
-                'tab-list': {
-                    templateUrl: 'templates/tab-detail.html',
-                    controller: 'codesCtrl'
-                }
+        }
+    })
+
+    .state('tab.detail', {
+        url: '/list/:codeId',
+        views: {
+            'tab-list': {
+                templateUrl: 'views/detail/detail.html',
+                controller: 'detailCtrl'
             }
-        })
-        .state('tab.about', {
-            url: '/about',
-            views: {
-                'tab-about': {
-                    templateUrl: 'templates/tab-about.html',
-                    controller: 'aboutCtrl'
-                }
+        }
+    })
+
+    .state('tab.about', {
+        url: '/about',
+        views: {
+            'tab-about': {
+                templateUrl: 'views/about/about.html',
+                controller: 'aboutCtrl'
             }
-        });
+        }
+    });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/home');

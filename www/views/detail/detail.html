@@ -1,0 +1,80 @@
+<ion-view view-title="PBS Details">
+
+    <!--   start subheader-->
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+
+        <label class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" class="searchbox" placeholder="Enter search terms" id="searchClients" name="searchClients" ng-model="searchList" ng-change="searchHandler()">
+            <a on-touch="clearSearch()" class="button button-icon icon ion-ios-close-empty"></a>
+        </label>
+
+    </ion-header-bar>
+    <!-- End subheader -->
+
+    <ion-content class="padding">
+
+        <!--  Quick search buttons     -->
+        <div class="button-bar bar-positive padding-bottom">
+            <a class="button button-small button-positive button-outline" id="Colorectal" on-touch="findType($event)">Colorectal</a>
+            <a class="button button-small button-positive button-outline" id="Breast" on-touch="findType($event)">Breast</a>
+            <a class="button button-small button-positive button-outline" id="Lung" on-touch="findType($event)">Lung</a>
+        </div>
+        <div class="button-bar bar-positive padding-bottom ">
+            <a class="button button-small button-positive button-outline" id="Prostate" on-touch="findType($event)">Prostate</a>
+            <a class="button button-small button-positive button-outline" id="Ovarian" on-touch="findType($event)">Ovarian</a>
+            <a class="button button-small button-positive button-outline" id="Leukaemia" on-touch="findType($event)">Leukaemia</a>
+        </div>
+
+        <div ng-repeat="code in codes | filterBy: ['Drug']: myFilter | filter: searchList">
+
+            <div class="item item-divider item-dark">
+                <b>{{ code.Drug }} {{code.Strength }} </b><span align="right" class="item-note">{{ code.Type }}</span>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col col-50"><b>{{ code.ScriptType }}</b>:</div>
+                    <div class="col" style="color:Red"><b>{{ code.Streamline }}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50"><b>Max PBS Qty</b>:
+                    </div>
+                    <div class="col">{{ code.PBSQty }}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-50"><b>Repeats</b>:
+                    </div>
+                    <div class="col">{{ code.PBSRepeats }} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50"><b>PBS Code</b>:
+                    </div>
+                    <div class="col">{{ code.PBSCode }} </div>
+                </div>
+                <div class="row" ng-if="code.Diagnosis">
+                    <div class="col col-50"><b>Diagnosis</b>:
+                    </div>
+                    <div class="col">{{ code.Diagnosis }}</div>
+                </div>
+                <div class="row" ng-if="code.Treatment">
+                    <div class="col col-50"><b>Treatment Phase</b>: </div>
+                    <div class="col">{{ code.Treatment }}</div>
+                </div>
+                <div class="row" ng-if="code.Criteria">
+                    <div class="col"><b>PBS Criteria</b>:
+                        <br>
+                        <p>{{ code.Criteria }} </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25"><b>Website</b>: </div>
+                    <div class="col">
+                        <a href="{{ code.Website }}" target="_blank">PBS Website for {{ code.Drug }} </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </ion-content>
+</ion-view>

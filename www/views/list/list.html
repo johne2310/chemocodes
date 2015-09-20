@@ -1,0 +1,26 @@
+<ion-view view-title="Search by Drug">
+    <!--   start subheader-->
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+
+        <label class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" class="searchbox" placeholder="Search by drug name" id="searchClients" name="searchClients" ng-model="searchList" ng-change="searchHandler()">
+            <a on-touch="clearSearch()" class="button button-icon icon ion-ios-close-empty"></a>
+        </label>
+
+    </ion-header-bar>
+    <!-- End subheader -->
+
+    <!--   start content-->
+    <ion-content padding="true">
+        <ion-list>
+            <ion-refresher on-refresh="doRefresh()" pulling-text="Pull to Refresh"></ion-refresher>
+            <div class="item item-avatar" auto-list-divider auto-list-divider-value="{{key}}" ng-repeat="(key, value) in codes | toArray | filter: searchList | countBy: 'Drug' " ui-sref="tab.detail({codeId: key})">
+                <img src="img\Benzene bullet 1.png " /> {{key}}
+                <span class="badge badge-positive icon-badge"> {{value}}</span>
+            </div>
+        </ion-list>
+
+    </ion-content>
+    <!--    end content-->
+</ion-view>

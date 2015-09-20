@@ -1,0 +1,85 @@
+<ion-view view-title="Search by Drug">
+    <!--   start subheader-->
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+
+        <label class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" class="searchbox" placeholder="Enter search terms" id="searchClients" name="searchClients" ng-model="searchList" ng-change="searchHandler()">
+            <a on-touch="clearSearch()" class="button button-icon icon ion-ios-close-empty"></a>
+        </label>
+
+    </ion-header-bar>
+
+    <!-- End subheader -->
+
+    <!--   start content-->
+    <ion-content padding="true">
+
+        <!--  Quick search buttons     -->
+        <div class="button-bar bar-positive padding-bottom">
+            <a class="button button-positive button-outline" id="Colorectal" on-touch="findCancerType($event)">Colorectal</a>
+            <a class="button button-positive button-outline" id="Breast" on-touch="findCancerType($event)">Breast</a>
+            <a class="button button-positive button-outline" id="Lung" on-touch="findCancerType($event)">Lung</a>
+        </div>
+        <div class="button-bar bar-positive padding-bottom ">
+            <a class="button button-positive button-outline" id="Prostate" on-touch="findCancerType($event)">Prostate</a>
+            <a class="button button-positive button-outline" id="Ovarian" on-touch="findCancerType($event)">Ovarian</a>
+            <a class="button button-positive button-outline" id="Leukaemia" on-touch="findCancerType($event)">Leukaemia</a>
+        </div>
+
+
+        <!--  Drug list Private    -->
+        <ion-list ng-show=" fullListPrivate ">
+            <ion-item class="item-icon-left item-icon-right item-text-wrap " collection-repeat="code in codes | orderBy: 'Drug' | filter: {Type: '!Public'}" ui-sref="tab.detail({codeId: code.ID})">
+                <!--                <a class="item item-avatar item-text-wrap" ui-sref="tab.detail({codeId: code.ID})" style=" text-decoration:none; ">-->
+                <!--                <img src="img\Benzene bullet 1.png " />-->
+                <i class="icon ion-email"></i>
+                <h2 style=" text-transform: uppercase ">{{code.Drug}} {{code.Strength}}</h2><i class="icon ion-person-telephone-outline"><span class="badge badge-positive icon-badge">PBS Qty: {{code.PBSCode}} </span></i>
+                <p>{{code.Diagnosis}}</p>
+                <p>{{code.Treatment}}</p>
+                <br>
+                <!--                </a>-->
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list ng-show="filteredListPrivate ">
+            <div ng-repeat="code in codes |orderBy: 'Drug' | filter: searchList | filter: {Type: '!Public'} ">
+                <div class="item item-text-wrap ">
+                    <a ui-sref="tab.detail({codeId: code.ID})" style=" text-decoration:none; ">
+                        <h2 style="text-transform: uppercase ">{{code.Drug}} {{code.Strength}}</h2>
+                        <p>{{code.Diagnosis}}</p>
+                        <p>{{code.Treatment}}</p>
+                    </a>
+                </div>
+            </div>
+        </ion-list>
+
+        <!--  Drug list Public    -->
+        <ion-list ng-show=" fullListPublic ">
+            <div auto-list-divider auto-list-divider-value="{{code.Drug}} " ng-repeat="code in codes | orderBy: 'Drug' | filter: {Type: '!Private'}">
+                <div class="item item-avatar item-text-wrap ">
+                    <img src="img\Benzene bullet 1.png " />
+                    <a ui-sref="tab.detail({codeId: code.ID})" style=" text-decoration:none; ">
+                        <h2 style=" text-transform: uppercase ">{{code.Drug}} {{code.Strength}}</h2> <span class="badge badge-assertive">{{ PBSQty}} </span>
+                        <p>{{code.Diagnosis}}</p>
+                        <p>{{code.Treatment}}</p>
+                    </a>
+                </div>
+            </div>
+        </ion-list>
+        <ion-list ng-show="filteredListPublic ">
+            <div ng-repeat="code in codes |orderBy: 'Drug' | filter: searchList | filter: {Type: '!Private'} ">
+                <div class="item item-text-wrap ">
+                    <a ui-sref="tab.detail({codeId: code.ID})" style=" text-decoration:none; ">
+                        <h2 style="text-transform: uppercase ">{{code.Drug}} {{code.Strength}}</h2>
+                        <p>{{code.Diagnosis}}</p>
+                        <p>{{code.Treatment}}</p>
+                    </a>
+                </div>
+            </div>
+        </ion-list>
+
+    </ion-content>
+    <!--    end content-->
+</ion-view>

@@ -75,3 +75,18 @@
 input[type="text"] {
     height: auto !important;
 }
+
+.spinner svg {
+    width: 28px;
+    height: 28px;
+    stroke: #33CCFF;
+    fill: #33CCFF;
+    text-align: right;
+}
+
+.item-icon-left ion-spinner {
+    float: left;
+    margin-left: -3.2em;
+    margin-right: 1em;
+    margin-top: -0.2em;
+}

@@ -1,121 +1,56 @@
-var chemoCodes = angular.module('chemoCodes.controllers', []);
+angular.module('starter.controllers', [])
 
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
-//////////////////////////
-//start controllers section
-/////////////////////////
+  // With the new view caching in Ionic, Controllers are only called
+  // when they are recreated or on app start, instead of every page change.
+  // To listen for when this page is active (for example, to refresh data),
+  // listen for the $ionicView.enter event:
+  //$scope.$on('$ionicView.enter', function(e) {
+  //});
 
-chemoCodes.controller('HomeCtrl', function ($scope) {});
+  // Form data for the login modal
+  $scope.loginData = {};
 
-////////////////////////
-//List view controller
-////////////////////////
-chemoCodes.controller('listCtrl', function ($scope, $state, CodeStore) {
-    $scope.codes = [];
-    $scope.searchList = [];
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/login.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
 
-    CodeStore.getCodes().then(function (data) {
-        $scope.codes = data;
-        $scope.fullList = true;
-        $scope.filteredList = false;
-    });
+  // Triggered in the login modal to close it
+  $scope.closeLogin = function() {
+    $scope.modal.hide();
+  };
 
-    // Client List: Client Search
-    $scope.searchHandler = function () {
-        var searchLength = $scope.searchList.length;
-        if (searchLength === 0) {
-            $scope.filteredList = false;
-            $scope.fullList = true;
-        } else {
-            $scope.filteredList = true;
-            $scope.fullList = false;
-        }
-    };
+  // Open the login modal
+  $scope.login = function() {
+    $scope.modal.show();
+  };
 
-    // Search button shortcuts
-    $scope.clearSearch = function () {
-        $scope.searchList = '';
-        $scope.searchHandler();
-    };
+  // Perform the login action when the user submits the login form
+  $scope.doLogin = function() {
+    console.log('Doing login', $scope.loginData);
 
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeLogin();
+    }, 1000);
+  };
+})
 
-    //find function
-    $scope.findCancerType = function (event) {
+.controller('PlaylistsCtrl', function($scope) {
+  $scope.playlists = [
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
 
-        var searchID = event.target.id;
-        $scope.data = {
-            activeButton: searchID
-        };
-
-        switch (searchID) {
-
-        case "Colorectal":
-            $scope.searchList = 'Colorectal';
-            $scope.data.activeButton = searchID;
-            break;
-        case "Lung":
-            $scope.searchList = 'Lung';
-            break;
-        case "Breast":
-            $scope.searchList = 'Breast';
-            break;
-        case "Prostate":
-            $scope.searchList = 'Prostate';
-            break;
-        case "Ovarian":
-            $scope.searchList = 'Ovarian';
-            break;
-        case "Leukaemia":
-            $scope.searchList = 'Leukaemia';
-            break;
-        }
-
-        $scope.searchHandler(); //switch to sorted list
-
-    };
-
-});
-//end listCtrl
-
-
-
-////////////////////////
-//Detail view controller
-////////////////////////
-chemoCodes.controller('detailCtrl', function ($scope, $state, CodeStore) {
-
-    console.log($state.params.codeId);
-    $scope.code = CodeStore.getCode($state.params.codeId);
-    console.log('New array is ', $scope.code);
-
-});
-//end detailCtrol
-
-
-////////////////////////
-//Codes view controller
-////////////////////////
-
-chemoCodes.controller('codesCtrl', function ($scope, $state, CodeStore) {
-    console.log('State params = ', $state.params.codeId);
-    $scope.detail = CodeStore.getCode($state.params.codeId);
-    console.log('$scope.detail is: ', $scope.detail);
-    //    $scope.detail = undefined;
-    //    for (var i = 0; i < $scope.code.Details.length; i++) {
-    //        if ($scope.code.Details[i].id2 === $state.params.detailId) {
-    //            $scope.detail = $scope.code.Details[i];
-    //            break;
-    //        }
-    //    }
-
-});
-// End codeCtrl
-
-
-////////////////////////
-//About view controller
-////////////////////////
-
-chemoCodes.controller('aboutCtrl', function ($scope) {
-
+.controller('PlaylistCtrl', function($scope, $stateParams) {
 });

@@ -1,5 +1,9 @@
 {
     "jscodehints.detectedExclusions": [
-        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/www/js/services.js"
+        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/www/js/services.js",
+        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/www/js/app.js",
+        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/platforms/android/cordova/lib/check_reqs.js",
+        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/platforms/android/cordova/lib/device.js",
+        "C:/Users/john.evans/Documents/Apps/Ionic/chemocodes/platforms/android/cordova/lib/build.js"
     ]
 }

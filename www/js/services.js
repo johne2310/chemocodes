@@ -3,6 +3,7 @@ var chemoCodes = angular.module('chemoCodes.services', []);
 chemoCodes.factory('CodeStore', function ($http) {
 
     var codes = [];
+
     return {
 
         getCodes: function () {
@@ -22,6 +23,13 @@ chemoCodes.factory('CodeStore', function ($http) {
             }
             return undefined;
         },
-
     };
+});
+
+
+chemoCodes.factory('hospitalType', function () {
+    //this factory set the private or public variable to alter filter for the drug list
+    hospType = {};
+    hospType.hosp = 'Private';
+    return hospType;
 });
