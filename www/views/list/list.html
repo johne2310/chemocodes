@@ -13,12 +13,25 @@
 
     <!--   start content-->
     <ion-content padding="true">
-        <ion-list>
+        <ion-list ng-show="fullList">
             <ion-refresher on-refresh="doRefresh()" pulling-text="Pull to Refresh"></ion-refresher>
-            <div class="item item-avatar" auto-list-divider auto-list-divider-value="{{key}}" ng-repeat="(key, value) in codes | toArray | filter: searchList | countBy: 'Drug' " ui-sref="tab.detail({codeId: key})">
+            <ion-item class="item item-avatar" auto-list-divider auto-list-divider-value="{{key}}" ng-repeat="(key, value) in codes | toArray | filter: searchList | countBy: 'Drug' " ui-sref="tab.detail({codeId: key})">
                 <img src="img\Benzene bullet 1.png " /> {{key}}
                 <span class="badge badge-positive icon-badge"> {{value}}</span>
-            </div>
+                <ion-option-button class="button-dark icon-left ion-ios-star" ng-click="deleteBirthday(birthday)">
+                    Bookmark
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+
+        <ion-list ng-show="altList">
+            <ion-item class="item item-avatar" ng-repeat="(key, value) in codes | toArray | filter: searchList | countBy: 'Drug' " ui-sref="tab.detail({codeId: key})">
+                <img src="img\Benzene bullet 1.png " /> {{key}}
+                <span class="badge badge-positive icon-badge"> {{value}}</span>
+                <ion-option-button class="button-dark icon-left ion-ios-star" ng-click="deleteBirthday(birthday)">
+                    Bookmark
+                </ion-option-button>
+            </ion-item>
         </ion-list>
 
     </ion-content>

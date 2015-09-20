@@ -3,11 +3,12 @@ var chemoCodes = angular.module('list.controller', ['angular.filter']);
 ////////////////////////
 //List view controller
 ////////////////////////
-chemoCodes.controller('listCtrl', function ($scope, $state, $ionicPlatform, CodeStore, $ionicListDelegate, $ionicScrollDelegate, $ionicLoading) {
+chemoCodes.controller('listCtrl', function ($scope, $state, $ionicPlatform, CodeStore, $ionicListDelegate, $ionicScrollDelegate, $ionicLoading, $ionicHistory) {
 
 
     $scope.codes = [];
     $scope.searchList = [];
+    $scope.fullList = true;
 
     //get all codes from the database
     $ionicLoading.show({
@@ -28,7 +29,6 @@ chemoCodes.controller('listCtrl', function ($scope, $state, $ionicPlatform, Code
     $scope.doRefresh = function () {
         $scope.codes = [];
         CodeStore.getCodes().then(function (data) {
-                console.log('useCache for refresh is ', useCache);
                 $scope.codes = data;
             })
             .finally(function () {
@@ -45,8 +45,16 @@ chemoCodes.controller('listCtrl', function ($scope, $state, $ionicPlatform, Code
     $scope.searchHandler = function () {
         var searchLength = $scope.searchList.length;
         if (searchLength === 0) {
-            $ionicScrollDelegate.scrollTop(true);
+            //            $scope.doRefresh();
+            //            $ionicScrollDelegate.scrollTop(true);
             $scope.doRefresh();
+            $scope.fullList = true;
+            $scope.altList = false;
+
+        } else {
+            $scope.fullList = false;
+            $scope.altList = true;
+            //            $ionicScrollDelegate.scrollTop(true);
         }
     };
 
@@ -54,7 +62,12 @@ chemoCodes.controller('listCtrl', function ($scope, $state, $ionicPlatform, Code
     // Search button shortcuts
     $scope.clearSearch = function () {
         $scope.searchList = '';
-        $scope.searchHandler();
+        $ionicHistory.clearCache();
+        $scope.fullList = true;
+        $scope.altList = false;
+        //        $scope.searchHandler();
+        //        $ionicScrollDelegate.scrollTop(true);
+        //        $scope.doRefresh();
     };
 
 });

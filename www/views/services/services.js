@@ -18,7 +18,7 @@ chemoCodes.factory('CodeStore', function ($http, $q, $ionicPopup) {
             console.log(localDB.adapter);
 
             remoteDB = new PouchDB("https://day41.cloudant.com/chemocodes", {
-                //                Authorization: 'Basic ZGF5NDE6ZGF5NDEyMzEw'
+                Authorization: 'Basic ZGF5NDE6ZGF5NDEyMzEw'
             });
 
             localDB.sync(remoteDB, {
@@ -30,33 +30,33 @@ chemoCodes.factory('CodeStore', function ($http, $q, $ionicPopup) {
 
         getCodes: function () {
 
-            if (useCache === 0) {
-                console.log('useCache = ', useCache);
-                return $q.when(remoteDB.allDocs({
-                        include_docs: true
-                    }))
-                    .then(function (docs) {
+            //            if (useCache === 0) {
+            console.log('useCache = ', useCache);
+            return $q.when(remoteDB.allDocs({
+                    include_docs: true
+                }))
+                .then(function (docs) {
 
-                        // Each row has a .doc object and we just want to send an
-                        // array of codes objects back to the calling controller,
-                        // so let's map the array to contain just the .doc objects.
-                        //                    alert('Loading local PouchDB');
-                        codes = docs.rows.map(function (row) {
-                            return row.doc;
-                        });
-
-                        useCache = 1;
-                        return codes;
-                    }).catch(function (error) {
-
-                        console.log('Error = ', error);
-
+                    // Each row has a .doc object and we just want to send an
+                    // array of codes objects back to the calling controller,
+                    // so let's map the array to contain just the .doc objects.
+                    //                    alert('Loading local PouchDB');
+                    codes = docs.rows.map(function (row) {
+                        return row.doc;
                     });
-            } else {
-                //return cached  data as a promise
-                //                console.log('Refresh useCache = ', useCache);
-                return $q.when(codes);
-            }
+
+                    useCache = 1;
+                    return codes;
+                }).catch(function (error) {
+
+                    console.log('Error = ', error);
+
+                });
+            //            } else {
+            //                //return cached  data as a promise
+            //                //                console.log('Refresh useCache = ', useCache);
+            //                return $q.when(codes);
+            //            }
         },
 
         getCode: function (codeId) {
